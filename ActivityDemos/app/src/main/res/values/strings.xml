@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ActivityDemos</string>
+    <string name="app_name">Activity Demos</string>
+    <string name="element_text">Element Text</string>
 </resources>
