@@ -5,10 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+/**
+ * @author Bubbles 
+ * @create 2018/7/9
+ * @Type Activity
+ * @LayoutFile activity_demos_recycler_view
+ * @Describe Demo的列表Activity，用一个RecyclerView来显示所有的Demo入口。
+ */
+
 public class MainActivity extends AppCompatActivity {
 
-    private String[] mDataset;
-    private static final int DATASET_COUNT = 60;
+    private String[] demoNames;
+    private static final int DATASET_COUNT = 10;
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -19,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initDataset();
+        initDemoNames();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.activity_demos_recycler_view);
 
@@ -32,17 +40,17 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new MyAdapter(mDataset);
+        mAdapter = new MyAdapter(demoNames);
 
         // set the adapter to RecyclerView
         mRecyclerView.setAdapter(mAdapter);
 
     }
 
-    private void initDataset() {
-        mDataset = new String[DATASET_COUNT];
+    private void initDemoNames() {
+        demoNames = new String[DATASET_COUNT];
         for (int i = 0; i < DATASET_COUNT; i++) {
-            mDataset[i] = "This is element #" + i;
+            demoNames[i] = "Activity Demo " + (i+1);
         }
     }
 }
