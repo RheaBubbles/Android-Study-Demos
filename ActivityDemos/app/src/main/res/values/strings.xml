@@ -1,7 +1,7 @@
 <resources>
     <!-- Global Resources -->
     <string name="app_name">Activity Demos</string>
-    <string name="main_activity_name">Demo List</string>
+    <string name="main_activity_name">Activity Demos</string>
     <string name="dome_1_name">Demo 1</string>
     <string name="element_text">Element Text</string>
 
@@ -9,8 +9,8 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="demo_1_info"> \n
-        1. Keying some word in the EditText. \n
+        1. Keying some words in the EditText. \n
         2. And click the SEND button. \n
-        3. Display Activity will start and show what your input.
+        3. Display Activity will start and show what you input.
     </string>
 </resources>

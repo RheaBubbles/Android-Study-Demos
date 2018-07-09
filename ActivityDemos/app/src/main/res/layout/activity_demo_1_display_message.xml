@@ -17,4 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <include layout="@layout/float_class_name"/>
+
 </android.support.constraint.ConstraintLayout>

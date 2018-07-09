@@ -28,5 +28,8 @@ public class Demo_1_DisplayMessageActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView);
         textView.setText(message);
+
+        TextView floatClassName = (TextView) findViewById(R.id.float_class_name);
+        floatClassName.setText("Activity Name: Demo_1_DisplayMessageActivity");
     }
 }

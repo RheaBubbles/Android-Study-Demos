@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 /**
  * @author Bubbles 
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         // set the adapter to RecyclerView
         mRecyclerView.setAdapter(mAdapter);
 
+        TextView floatClassName = (TextView) findViewById(R.id.float_class_name);
+        floatClassName.setText("Activity Name: MainActivity");
     }
 
     private void initDemoNames() {

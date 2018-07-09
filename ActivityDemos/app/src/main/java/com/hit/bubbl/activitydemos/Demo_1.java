@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * @author Bubbles
@@ -23,6 +25,9 @@ public class Demo_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_1);
+
+        TextView floatClassName = (TextView) findViewById(R.id.float_class_name);
+        floatClassName.setText("Activity Name: Demo_1");
     }
 
     /**
@@ -34,10 +39,14 @@ public class Demo_1 extends AppCompatActivity {
     public void sendMessage(View view) {
         // Intent(Context context, Class class)
         // 这里第一个参数使用this是因为Activity类是Context的子类
-        Intent intent = new Intent(this, Demo_1_DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.editText);
         String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        if(message.length() != 0) {
+            Intent intent = new Intent(this, Demo_1_DisplayMessageActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, message);
+            startActivity(intent);
+        } else {
+            Toast.makeText(view.getContext(), "No words here!ヽ(`Д´)ノ", Toast.LENGTH_SHORT).show();
+        }
     }
 }

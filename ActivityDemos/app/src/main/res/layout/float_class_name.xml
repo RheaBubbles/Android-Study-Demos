@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/classNameBackground"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/class_name_padding"
+    android:paddingTop="@dimen/class_name_padding"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:id="@+id/float_class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Put in class name" />
+</LinearLayout>
