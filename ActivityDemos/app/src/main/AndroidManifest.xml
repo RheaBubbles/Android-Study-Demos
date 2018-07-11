@@ -22,20 +22,55 @@
             android:name=".Demo_1"
             android:label="@string/dome_1_name"
             android:parentActivityName=".MainActivity">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <!-- And the meta data can add a 'back to up ←' button on the action bar -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Demo_1_DisplayMessageActivity"
+        <activity
+            android:name=".Demo_1_DisplayMessageActivity"
             android:label="Display Message"
             android:parentActivityName=".Demo_1">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <!-- And the meta data can add a 'back to up ←' button on the action bar -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Demo_1"/>
+                android:value=".Demo_1" />
+        </activity>
+        <activity
+            android:name=".Demo_2"
+            android:label="@string/dome_2_name"
+            android:parentActivityName=".MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <!-- And the meta data can add a 'back to up ←' button on the action bar -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".Demo_2_Launched"
+            android:label="@string/dome_2_launched_name"
+            android:parentActivityName=".Demo_2">
+            <intent-filter>
+                <action android:name="com.hit.bubbl.IMPLICITLY"/>
+                <!-- action name中声明接受的Intent操作 -->
+                <data android:mimeType="text/plain"/>
+                <!-- data 使用一个或多个指定数据 URI 各个方面（scheme、host、port、path 等）
+                    和 MIME 类型的属性，声明接受的数据类型。 -->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!-- category 在 name 属性中，声明接受的 Intent 类别。
+                    该值必须是操作的文本字符串值，而不是类常量。  -->
+            </intent-filter>
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <!-- And the meta data can add a 'back to up ←' button on the action bar -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
     </application>
 
